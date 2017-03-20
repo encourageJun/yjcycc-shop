@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.yjcycc.shop</groupId>
+  <artifactId>yjcycc-shop</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>pom</packaging>
+  <name>yjcycc-shop</name>
+  
+  <modules>
+  	<module>yjcycc-shop-member</module>
+    <module>yjcycc-shop-goods</module>
+    <module>yjcycc-shop-order</module>
+    <module>yjcycc-shop-pay</module>
+    <module>yjcycc-shop-report</module>
+    <module>yjcycc-shop-houtai</module>
+    <module>yjcycc-shop-app</module>
+  </modules>
+  
+  <dependencyManagement>
+  	<dependencies>
+  		<dependency>
+  			<groupId>com.yjcycc.shop</groupId>
+  			<artifactId>yjcycc-shop-member</artifactId>
+  			<version>0.0.1-SNAPSHOT</version>
+  		</dependency>
+  	</dependencies>
+  </dependencyManagement>
+  
+</project>
