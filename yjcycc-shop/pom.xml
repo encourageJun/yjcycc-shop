@@ -8,6 +8,7 @@
   <name>yjcycc-shop</name>
   
   <modules>
+    <module>yjcycc-shop-common</module>
   	<module>yjcycc-shop-member</module>
     <module>yjcycc-shop-goods</module>
     <module>yjcycc-shop-order</module>
@@ -21,7 +22,42 @@
   	<dependencies>
   		<dependency>
   			<groupId>com.yjcycc.shop</groupId>
+  			<artifactId>yjcycc-shop-common</artifactId>
+  			<version>0.0.1-SNAPSHOT</version>
+  		</dependency>
+  		<dependency>
+  			<groupId>com.yjcycc.shop</groupId>
   			<artifactId>yjcycc-shop-member</artifactId>
+  			<version>0.0.1-SNAPSHOT</version>
+  		</dependency>
+  		<dependency>
+  			<groupId>com.yjcycc.shop</groupId>
+  			<artifactId>yjcycc-shop-goods</artifactId>
+  			<version>0.0.1-SNAPSHOT</version>
+  		</dependency>
+  		<dependency>
+  			<groupId>com.yjcycc.shop</groupId>
+  			<artifactId>yjcycc-shop-order</artifactId>
+  			<version>0.0.1-SNAPSHOT</version>
+  		</dependency>
+  		<dependency>
+  			<groupId>com.yjcycc.shop</groupId>
+  			<artifactId>yjcycc-shop-pay</artifactId>
+  			<version>0.0.1-SNAPSHOT</version>
+  		</dependency>
+  		<dependency>
+  			<groupId>com.yjcycc.shop</groupId>
+  			<artifactId>yjcycc-shop-report</artifactId>
+  			<version>0.0.1-SNAPSHOT</version>
+  		</dependency>
+  		<dependency>
+  			<groupId>com.yjcycc.shop</groupId>
+  			<artifactId>yjcycc-shop-houtai</artifactId>
+  			<version>0.0.1-SNAPSHOT</version>
+  		</dependency>
+  		<dependency>
+  			<groupId>com.yjcycc.shop</groupId>
+  			<artifactId>yjcycc-shop-app</artifactId>
   			<version>0.0.1-SNAPSHOT</version>
   		</dependency>
   	</dependencies>
