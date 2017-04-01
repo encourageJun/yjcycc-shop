@@ -14,7 +14,8 @@ import com.github.pagehelper.Page;
  */
 public class App 
 {
-    public static void main( String[] args )
+    @SuppressWarnings("resource")
+	public static void main( String[] args )
     {
         System.out.println( "Hello World!" );
         
