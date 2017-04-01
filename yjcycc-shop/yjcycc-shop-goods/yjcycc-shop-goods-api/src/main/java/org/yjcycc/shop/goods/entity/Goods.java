@@ -1,6 +1,7 @@
 package org.yjcycc.shop.goods.entity;
 
 import java.io.Serializable;
+import java.util.Date;
 
 /**
  * 实体类-商品基本信息表
@@ -41,6 +42,10 @@ public class Goods implements Serializable {
 	private Long goodsCategoryId; // 商品分类id
 	private Long goodsIntroduceId; // 商品介绍id
 	private Long goodsParamsId; // 商品参数id
+	
+	// 时间
+	private Date insertTime; // 插入时间
+	private Date updateTime; // 更新时间
 
 	public Long getId() {
 		return id;
@@ -176,6 +181,22 @@ public class Goods implements Serializable {
 
 	public void setGoodsParamsId(Long goodsParamsId) {
 		this.goodsParamsId = goodsParamsId;
+	}
+
+	public Date getInsertTime() {
+		return insertTime;
+	}
+
+	public void setInsertTime(Date insertTime) {
+		this.insertTime = insertTime;
+	}
+
+	public Date getUpdateTime() {
+		return updateTime;
+	}
+
+	public void setUpdateTime(Date updateTime) {
+		this.updateTime = updateTime;
 	}
 
 }

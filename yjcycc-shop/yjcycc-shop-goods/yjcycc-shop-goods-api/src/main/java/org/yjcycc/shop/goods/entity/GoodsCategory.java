@@ -1,6 +1,7 @@
 package org.yjcycc.shop.goods.entity;
 
 import java.io.Serializable;
+import java.util.Date;
 
 /**
  * 实体类-商品分类表
@@ -15,6 +16,8 @@ public class GoodsCategory implements Serializable {
 	private Long id;
 	private String name; // 商品分类名称
 	private Integer sort; // 排序序号
+	private Date insertTime; // 插入时间
+	private Date updateTime; // 更新时间
 
 	public Long getId() {
 		return id;
@@ -38,6 +41,22 @@ public class GoodsCategory implements Serializable {
 
 	public void setSort(Integer sort) {
 		this.sort = sort;
+	}
+
+	public Date getInsertTime() {
+		return insertTime;
+	}
+
+	public void setInsertTime(Date insertTime) {
+		this.insertTime = insertTime;
+	}
+
+	public Date getUpdateTime() {
+		return updateTime;
+	}
+
+	public void setUpdateTime(Date updateTime) {
+		this.updateTime = updateTime;
 	}
 
 }

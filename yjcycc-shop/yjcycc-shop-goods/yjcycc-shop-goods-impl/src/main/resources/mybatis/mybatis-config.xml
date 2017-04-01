@@ -9,17 +9,10 @@
         <setting name="logImpl" value="LOG4J"/> 
     </settings>
 
-	<typeAliases>
-		<!-- <typeAlias type="com.ihavecar.util.PageData" alias="pd"/> -->
+	<!-- <typeAliases>
+		<typeAlias type="org.yjcycc.shop.goods.entity.Goods" alias="goods"/>
 		
 		<package name="org.yjcycc.shop.goods.entity"/>
-	</typeAliases>
-	
-<!-- 	<plugins> -->
-<!-- 		<plugin interceptor="com.ihavecar.page.PagePlugin"> -->
-<!-- 			<property name="dialect" value="mysql"/> -->
-<!-- 			<property name="pageSqlId" value=".*listPage.*"/> -->
-<!-- 		</plugin> -->
-<!-- 	</plugins> -->
+	</typeAliases> -->
 	
 </configuration>

@@ -33,8 +33,8 @@ public class CustomDruidDataSource extends DruidDataSource {
 	
 	public static void main(String[] args) {
 		try {
-			String username = ConfigTools.encrypt("Ihavecar711");
-			String password = ConfigTools.encrypt("Ihavecar711");
+			String username = ConfigTools.encrypt("yjcycc");
+			String password = ConfigTools.encrypt("Yjcycc123");
 			System.out.println(username + "\n" + password);
 		} catch (Exception e) {
 			e.printStackTrace();
