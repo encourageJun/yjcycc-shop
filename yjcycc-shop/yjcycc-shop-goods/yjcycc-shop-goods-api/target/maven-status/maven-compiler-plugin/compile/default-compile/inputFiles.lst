@@ -1,7 +1,10 @@
+G:\workspace-git-myaccount\yjcycc-shop\yjcycc-shop\yjcycc-shop-goods\yjcycc-shop-goods-api\src\main\java\org\yjcycc\shop\goods\client\GoodsClient.java
 G:\workspace-git-myaccount\yjcycc-shop\yjcycc-shop\yjcycc-shop-goods\yjcycc-shop-goods-api\src\main\java\org\yjcycc\shop\goods\entity\Goods.java
 G:\workspace-git-myaccount\yjcycc-shop\yjcycc-shop\yjcycc-shop-goods\yjcycc-shop-goods-api\src\main\java\org\yjcycc\shop\goods\entity\GoodsParams.java
 G:\workspace-git-myaccount\yjcycc-shop\yjcycc-shop\yjcycc-shop-goods\yjcycc-shop-goods-api\src\main\java\org\yjcycc\shop\goods\entity\GoodsCategory.java
-G:\workspace-git-myaccount\yjcycc-shop\yjcycc-shop\yjcycc-shop-goods\yjcycc-shop-goods-api\src\main\java\org\yjcycc\shop\goods\api\App.java
-G:\workspace-git-myaccount\yjcycc-shop\yjcycc-shop\yjcycc-shop-goods\yjcycc-shop-goods-api\src\main\java\org\yjcycc\shop\goods\entity\GoodsIntroduce.java
 G:\workspace-git-myaccount\yjcycc-shop\yjcycc-shop\yjcycc-shop-goods\yjcycc-shop-goods-api\src\main\java\org\yjcycc\shop\goods\entity\GoodsGroup.java
+G:\workspace-git-myaccount\yjcycc-shop\yjcycc-shop\yjcycc-shop-goods\yjcycc-shop-goods-api\src\main\java\org\yjcycc\shop\goods\entity\GoodsIntroduce.java
+G:\workspace-git-myaccount\yjcycc-shop\yjcycc-shop\yjcycc-shop-goods\yjcycc-shop-goods-api\src\main\java\org\yjcycc\shop\goods\service\GoodsServerService.java
+G:\workspace-git-myaccount\yjcycc-shop\yjcycc-shop\yjcycc-shop-goods\yjcycc-shop-goods-api\src\main\java\org\yjcycc\shop\goods\client\GoodsZookeeperClient.java
+G:\workspace-git-myaccount\yjcycc-shop\yjcycc-shop\yjcycc-shop-goods\yjcycc-shop-goods-api\src\main\java\org\yjcycc\shop\goods\service\GoodsService.java
 G:\workspace-git-myaccount\yjcycc-shop\yjcycc-shop\yjcycc-shop-goods\yjcycc-shop-goods-api\src\main\java\org\yjcycc\shop\goods\entity\GoodsGroupGoods.java

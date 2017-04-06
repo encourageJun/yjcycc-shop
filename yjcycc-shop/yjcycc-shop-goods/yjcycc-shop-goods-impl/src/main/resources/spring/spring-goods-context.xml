@@ -53,7 +53,7 @@
 	
 	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
 		<property name="dataSource" ref="dataSource" />
-		<property name="configLocation" value="classpath:/mybatis/mybatis-config.xml"/>
+		<property name="configLocation" value="classpath:/mybatis/mybatis-goods-config.xml"/>
 		<property name="typeAliasesPackage" value="org.yjcycc.shop.goods.entity"/>
 		<property name="mapperLocations">
 			<list>  

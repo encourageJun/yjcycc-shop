@@ -1,7 +1,12 @@
 org\yjcycc\shop\goods\entity\GoodsIntroduce.class
+org\yjcycc\shop\goods\service\GoodsService.class
 org\yjcycc\shop\goods\entity\GoodsGroup.class
 org\yjcycc\shop\goods\entity\Goods.class
 org\yjcycc\shop\goods\entity\GoodsParams.class
-org\yjcycc\shop\goods\api\App.class
+org\yjcycc\shop\goods\service\GoodsServerService.class
+org\yjcycc\shop\goods\client\GoodsClient.class
+org\yjcycc\shop\goods\client\GoodsZookeeperClient$1.class
+org\yjcycc\shop\goods\client\GoodsZookeeperClient$2.class
+org\yjcycc\shop\goods\client\GoodsZookeeperClient.class
 org\yjcycc\shop\goods\entity\GoodsGroupGoods.class
 org\yjcycc\shop\goods\entity\GoodsCategory.class

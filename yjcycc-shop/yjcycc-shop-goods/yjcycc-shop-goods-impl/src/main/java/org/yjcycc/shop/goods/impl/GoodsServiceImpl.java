@@ -1,5 +1,6 @@
 package org.yjcycc.shop.goods.impl;
 
+import java.rmi.RemoteException;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -13,14 +14,14 @@ import org.yjcycc.shop.goods.service.GoodsService;
 import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
 
-@Service
+@Service("goodsService")
 public class GoodsServiceImpl implements GoodsService {
 	
 	@Autowired
 	private GoodsMapper goodsMapper;
 
 	@Override
-	public Page<Goods> findPager(String name) {
+	public Page<Goods> findPager(String name) throws RemoteException {
 		Map<String,Object> map = new HashMap<String,Object>();
 		map.put("name", name);
 		
