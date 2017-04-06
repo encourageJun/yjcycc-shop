@@ -6,21 +6,15 @@ import org.yjcycc.shop.goods.service.GoodsService;
 
 import com.github.pagehelper.Page;
 
-/**
- * Hello world!
- *
- */
-public class App 
-{
-	public static void main( String[] args )
-    {
-        System.out.println( "Hello World!" );
-        
-        /*ApplicationContext context = new ClassPathXmlApplicationContext(new String[]{"spring/spring-goods-context.xml"}); 
+public class Test {
+
+	public static void main(String[] args) {
+		
+		/*ApplicationContext context = new ClassPathXmlApplicationContext(new String[]{"spring/spring-goods-context.xml"}); 
         BeanFactory factory = (BeanFactory) context;  
         GoodsService goodsService = (GoodsService) factory.getBean("goodsService");*/
-        
-        GoodsService goodsService = (GoodsService) GoodsClient.getRemoteService("GoodsService");
+		
+		GoodsService goodsService = (GoodsService) GoodsClient.getRemoteService("GoodsService");
         
         try {
 	        Page<Goods> pager = goodsService.findPager("aa");
@@ -31,5 +25,7 @@ public class App
         } catch (Exception e) {
         	e.printStackTrace();
         }
-    }
+
+	}
+
 }
