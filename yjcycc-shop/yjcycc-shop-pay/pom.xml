@@ -8,8 +8,6 @@
     <version>0.0.1-SNAPSHOT</version>
   </parent>
   <artifactId>yjcycc-shop-pay</artifactId>
-  <name>yjcycc-shop-pay</name>
-  <url>http://maven.apache.org</url>
   <packaging>pom</packaging>
   
   <modules>
@@ -21,12 +19,12 @@
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
+  
   <dependencies>
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>3.8.1</version>
-      <scope>test</scope>
-    </dependency>
+	<dependency>
+		<groupId>com.yjcycc.shop</groupId>
+		<artifactId>yjcycc-shop-common</artifactId>
+	</dependency>
   </dependencies>
+  
 </project>

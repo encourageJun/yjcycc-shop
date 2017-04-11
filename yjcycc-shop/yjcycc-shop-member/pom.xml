@@ -13,4 +13,12 @@
   	<module>yjcycc-shop-member-api</module>
   	<module>yjcycc-shop-member-impl</module>
   </modules>
+  
+  <dependencies>
+	<dependency>
+		<groupId>com.yjcycc.shop</groupId>
+		<artifactId>yjcycc-shop-common</artifactId>
+	</dependency>
+  </dependencies>
+  
 </project>

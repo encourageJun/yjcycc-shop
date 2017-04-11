@@ -9,8 +9,6 @@
   </parent>
   <artifactId>yjcycc-shop-goods</artifactId>
   <packaging>pom</packaging>
-  <name>Archetype - yjcycc-shop-goods</name>
-  <url>http://maven.apache.org</url>
   
   <modules>
   	<module>yjcycc-shop-goods-api</module>
@@ -18,12 +16,10 @@
   </modules>
   
   <dependencies>
-		<!-- junit -->
-    	<dependency>
-	      	<groupId>junit</groupId>
-	      	<artifactId>junit</artifactId>
-			<version>4.10</version>
-    	</dependency>
+	<dependency>
+		<groupId>com.yjcycc.shop</groupId>
+		<artifactId>yjcycc-shop-common</artifactId>
+	</dependency>
   </dependencies>
   
 </project>

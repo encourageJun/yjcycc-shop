@@ -9,8 +9,6 @@
   </parent>
   <artifactId>yjcycc-shop-order</artifactId>
   <packaging>pom</packaging>
-  <name>yjcycc-shop-order</name>
-  <url>http://maven.apache.org</url>
   
   <modules>
   	<module>yjcycc-shop-order-api</module>
@@ -20,12 +18,12 @@
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
+  
   <dependencies>
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>3.8.1</version>
-      <scope>test</scope>
-    </dependency>
+	<dependency>
+		<groupId>com.yjcycc.shop</groupId>
+		<artifactId>yjcycc-shop-common</artifactId>
+	</dependency>
   </dependencies>
+  
 </project>
