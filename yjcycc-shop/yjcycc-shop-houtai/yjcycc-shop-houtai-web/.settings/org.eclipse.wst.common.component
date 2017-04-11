@@ -17,6 +17,6 @@
             <dependency-type>uses</dependency-type>
         </dependent-module>
         <property name="java-output-path" value="/yjcycc-shop-houtai-web/target/classes"/>
-        <property name="context-root" value="yjcycc-shop"/>
+        <property name="context-root" value="houtai"/>
     </wb-module>
 </project-modules>
