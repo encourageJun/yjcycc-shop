@@ -20,7 +20,7 @@ import org.apache.zookeeper.data.Stat;
 import org.yjcycc.shop.common.rmi.GoodsRemoteConfig;
 import org.yjcycc.shop.common.rmi.RemoteConfig;
 import org.yjcycc.shop.common.rmi.UsingIpPort;
-import org.yjcycc.shop.common.util.JsonUtil;
+import org.yjcycc.shop.common.utils.JsonUtil;
 
 
 

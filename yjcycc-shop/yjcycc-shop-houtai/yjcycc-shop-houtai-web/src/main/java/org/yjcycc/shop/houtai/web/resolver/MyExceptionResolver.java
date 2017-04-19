@@ -14,7 +14,7 @@ import org.yjcycc.shop.common.Constant;
 import org.yjcycc.shop.common.exception.BizException;
 import org.yjcycc.shop.common.exception.ParameterException;
 import org.yjcycc.shop.common.exception.PermissionException;
-import org.yjcycc.shop.common.util.JsonUtil;
+import org.yjcycc.shop.common.utils.JsonUtil;
 
 /**
  * @description Spring自定义异常解析器

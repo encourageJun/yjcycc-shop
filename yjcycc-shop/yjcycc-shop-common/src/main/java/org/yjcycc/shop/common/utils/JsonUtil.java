@@ -1,4 +1,4 @@
-package org.yjcycc.shop.common.util;
+package org.yjcycc.shop.common.utils;
 
 import java.util.List;
 
