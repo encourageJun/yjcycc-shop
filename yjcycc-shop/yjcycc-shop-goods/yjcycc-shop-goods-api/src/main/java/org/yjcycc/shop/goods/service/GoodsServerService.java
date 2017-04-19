@@ -1,6 +1,6 @@
 package org.yjcycc.shop.goods.service;
 
-import org.yjcycc.shop.common.conf.UsingIpPort;
+import org.yjcycc.shop.common.rmi.UsingIpPort;
 
 public interface GoodsServerService {
 

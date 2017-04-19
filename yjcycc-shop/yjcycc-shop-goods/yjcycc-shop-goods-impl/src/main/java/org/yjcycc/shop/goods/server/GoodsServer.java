@@ -18,8 +18,8 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
 import org.springframework.context.Lifecycle;
 import org.springframework.stereotype.Component;
-import org.yjcycc.shop.common.conf.GoodsRemoteConfig;
-import org.yjcycc.shop.common.conf.UsingIpPort;
+import org.yjcycc.shop.common.rmi.GoodsRemoteConfig;
+import org.yjcycc.shop.common.rmi.UsingIpPort;
 import org.yjcycc.shop.goods.service.GoodsServerService;
 import org.yjcycc.shop.goods.service.GoodsService;
 

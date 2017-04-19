@@ -14,8 +14,9 @@ import org.apache.zookeeper.CreateMode;
 import org.apache.zookeeper.ZooDefs;
 import org.apache.zookeeper.data.Stat;
 import org.springframework.stereotype.Component;
-import org.yjcycc.shop.common.conf.GoodsRemoteConfig;
-import org.yjcycc.shop.common.conf.UsingIpPort;
+import org.yjcycc.shop.common.rmi.GoodsRemoteConfig;
+import org.yjcycc.shop.common.rmi.RemoteConfig;
+import org.yjcycc.shop.common.rmi.UsingIpPort;
 
 /**
  * @author Rosun zk客户端和zk服务器间主要可能存在下面几种异常情况：<br>
@@ -99,11 +100,11 @@ public class GoodsZookeeperClient {
 		if (this.usingIpPort == null) {
 			throw new IllegalStateException("ERROR ! parameter usingIpPort not setted yet!");
 		}
-		String connString = GoodsRemoteConfig.getInstance().getZookeeperConnUrl();
+		String connString = RemoteConfig.getInstance().getZookeeperConnUrl();
 		logger.info("开始链接Zookeeper咯~        usingIpPort="+this.usingIpPort.toString() + ",Zookeeper connString="+connString);
 		
 		
-		final byte[] data = this.usingIpPort.toString().getBytes(GoodsRemoteConfig.charset);// 节点值
+		final byte[] data = this.usingIpPort.toString().getBytes(RemoteConfig.charset);// 节点值
 
 		//创建客户端
 		zkTools = createZookeeperClient(connString);
@@ -143,7 +144,7 @@ public class GoodsZookeeperClient {
 		return CuratorFrameworkFactory.builder().connectString(connString)
 		.sessionTimeoutMs(5000)
 		.connectionTimeoutMs(3000)
-		.namespace(GoodsRemoteConfig.NAME_SPACE).retryPolicy(new RetryNTimes(5, 1000)).connectionTimeoutMs(30000).build();
+		.namespace(RemoteConfig.NAME_SPACE).retryPolicy(new RetryNTimes(5, 1000)).connectionTimeoutMs(30000).build();
 	}
 
 	 

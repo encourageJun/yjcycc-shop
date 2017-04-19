@@ -1,4 +1,4 @@
-package org.yjcycc.shop.common.conf;
+package org.yjcycc.shop.common.rmi;
 
 import java.io.IOException;
 import java.io.InputStream;

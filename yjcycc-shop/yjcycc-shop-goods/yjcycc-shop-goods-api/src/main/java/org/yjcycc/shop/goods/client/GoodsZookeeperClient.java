@@ -17,8 +17,9 @@ import org.apache.curator.framework.recipes.cache.PathChildrenCacheListener;
 import org.apache.curator.retry.RetryNTimes;
 import org.apache.log4j.Logger;
 import org.apache.zookeeper.data.Stat;
-import org.yjcycc.shop.common.conf.GoodsRemoteConfig;
-import org.yjcycc.shop.common.conf.UsingIpPort;
+import org.yjcycc.shop.common.rmi.GoodsRemoteConfig;
+import org.yjcycc.shop.common.rmi.RemoteConfig;
+import org.yjcycc.shop.common.rmi.UsingIpPort;
 import org.yjcycc.shop.common.util.JsonUtil;
 
 
@@ -110,7 +111,7 @@ public class GoodsZookeeperClient {
 		CuratorFramework client = null;
 		List<UsingIpPort> tmpIpPorts = new ArrayList<>();
 		try {
-			String connString = GoodsRemoteConfig.getInstance().getZookeeperConnUrl();
+			String connString = RemoteConfig.getInstance().getZookeeperConnUrl();
 			client = createZookeeperClient(connString);
 			client.start();
 			Stat stat = client.checkExists().forPath(GoodsRemoteConfig.BASE_PATH_SHOP_GOODS);
@@ -126,7 +127,7 @@ public class GoodsZookeeperClient {
 				for (String p : paths) {
 					logger.info("loadNodes>> p=" + p);
 					String d = new String(client.getData().forPath(GoodsRemoteConfig.BASE_PATH_SHOP_GOODS + "/" + p),
-							GoodsRemoteConfig.charset);
+							RemoteConfig.charset);
 					logger.info("loadNodes>> d=" + d);
 					if (isboolIp(d)) {
 						logger.warn("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
@@ -176,7 +177,7 @@ public class GoodsZookeeperClient {
 
 	private static CuratorFramework createZookeeperClient(String connString) {
 		return CuratorFrameworkFactory.builder().connectString(connString).sessionTimeoutMs(5000)
-				.connectionTimeoutMs(3000).namespace(GoodsRemoteConfig.NAME_SPACE).retryPolicy(new RetryNTimes(5, 1000))
+				.connectionTimeoutMs(3000).namespace(RemoteConfig.NAME_SPACE).retryPolicy(new RetryNTimes(5, 1000))
 				.connectionTimeoutMs(30000).build();
 	}
 
@@ -201,7 +202,7 @@ public class GoodsZookeeperClient {
 			for (String p : paths) {
 				logger.info("loadNodes>> p=" + p);
 				String d = new String(this.zkTools.getData().forPath(GoodsRemoteConfig.BASE_PATH_SHOP_GOODS + "/" + p),
-						GoodsRemoteConfig.charset);
+						RemoteConfig.charset);
 				logger.info("loadNodes>> d=" + d);
 				if (isboolIp(d)) {
 					logger.warn("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
@@ -226,7 +227,7 @@ public class GoodsZookeeperClient {
 		// 注册监听 检查节点数据变化
 		try {
 			pool = Executors.newFixedThreadPool(1);
-			String connString = GoodsRemoteConfig.getInstance().getZookeeperConnUrl();
+			String connString = RemoteConfig.getInstance().getZookeeperConnUrl();
 			this.zkTools = createZookeeperClient(connString);
 			this.zkTools.start();
 
