@@ -17,6 +17,7 @@
     <module>yjcycc-shop-houtai</module>
     <module>yjcycc-shop-app</module>
     <module>yjcycc-shop-dtm</module>
+    <module>yjcycc-shop-activity</module>
   </modules>
   
   <dependencyManagement>
