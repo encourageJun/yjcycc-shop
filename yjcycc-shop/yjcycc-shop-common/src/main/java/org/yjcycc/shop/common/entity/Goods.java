@@ -1,4 +1,4 @@
-package org.yjcycc.shop.goods.entity;
+package org.yjcycc.shop.common.entity;
 
 import java.io.Serializable;
 import java.util.Date;

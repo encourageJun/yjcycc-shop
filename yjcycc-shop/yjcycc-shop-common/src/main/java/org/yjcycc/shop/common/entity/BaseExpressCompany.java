@@ -1,29 +1,30 @@
-package org.yjcycc.shop.goods.entity;
+package org.yjcycc.shop.common.entity;
 
 import java.io.Serializable;
 import java.util.Date;
 
 /**
- * 实体类-商品分组表
+ * 实体类- 基础数据-快递公司
+ * 
  * @author Yangjun
  *
  */
 
-public class GoodsGroup implements Serializable {
+public class BaseExpressCompany implements Serializable {
 
-	private static final long serialVersionUID = 6749697395219469310L;
+	private static final long serialVersionUID = -5512234210201588320L;
 
-	private Long id;
-	private String name; // 商品分组名称
-	private Long sort; // 排序序号
-	private Date insertTime; // 插入时间
+	private String id;
+	private String name; // 快递公司名称
+	private String code; // 快递公司通用编码
+	private Date insertTime; // 创建时间
 	private Date updateTime; // 更新时间
 
-	public Long getId() {
+	public String getId() {
 		return id;
 	}
 
-	public void setId(Long id) {
+	public void setId(String id) {
 		this.id = id;
 	}
 
@@ -35,12 +36,12 @@ public class GoodsGroup implements Serializable {
 		this.name = name;
 	}
 
-	public Long getSort() {
-		return sort;
+	public String getCode() {
+		return code;
 	}
 
-	public void setSort(Long sort) {
-		this.sort = sort;
+	public void setCode(String code) {
+		this.code = code;
 	}
 
 	public Date getInsertTime() {

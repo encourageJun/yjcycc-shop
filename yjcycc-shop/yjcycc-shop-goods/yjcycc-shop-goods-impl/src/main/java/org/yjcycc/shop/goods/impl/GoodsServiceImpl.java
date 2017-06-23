@@ -7,7 +7,7 @@ import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.yjcycc.shop.goods.entity.Goods;
+import org.yjcycc.shop.common.entity.Goods;
 import org.yjcycc.shop.goods.mapper.GoodsMapper;
 import org.yjcycc.shop.goods.service.GoodsService;
 

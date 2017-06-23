@@ -1,21 +1,21 @@
-package org.yjcycc.shop.goods.entity;
+package org.yjcycc.shop.common.entity;
 
 import java.io.Serializable;
 import java.util.Date;
 
 /**
- * 实体类-商品分类表
+ * 实体类-商品分组表
  * @author Yangjun
  *
  */
 
-public class GoodsCategory implements Serializable {
+public class GoodsGroup implements Serializable {
 
-	private static final long serialVersionUID = 6863782088201986867L;
+	private static final long serialVersionUID = 6749697395219469310L;
 
 	private Long id;
-	private String name; // 商品分类名称
-	private Integer sort; // 排序序号
+	private String name; // 商品分组名称
+	private Long sort; // 排序序号
 	private Date insertTime; // 插入时间
 	private Date updateTime; // 更新时间
 
@@ -35,11 +35,11 @@ public class GoodsCategory implements Serializable {
 		this.name = name;
 	}
 
-	public Integer getSort() {
+	public Long getSort() {
 		return sort;
 	}
 
-	public void setSort(Integer sort) {
+	public void setSort(Long sort) {
 		this.sort = sort;
 	}
 
