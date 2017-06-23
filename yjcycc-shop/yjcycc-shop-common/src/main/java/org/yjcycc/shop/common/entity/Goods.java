@@ -3,12 +3,15 @@ package org.yjcycc.shop.common.entity;
 import java.io.Serializable;
 import java.util.Date;
 
+import org.apache.ibatis.type.Alias;
+
 /**
  * 实体类-商品基本信息表
  * @author Yangjun
  *
  */
 
+@Alias("goods")
 public class Goods implements Serializable {
 
 	private static final long serialVersionUID = -610525676727417054L;

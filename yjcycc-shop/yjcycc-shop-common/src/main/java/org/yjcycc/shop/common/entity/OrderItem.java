@@ -10,7 +10,7 @@ import java.util.Date;
  *
  */
 
-public class OrderGoodsItem implements Serializable {
+public class OrderItem implements Serializable {
 
 	private static final long serialVersionUID = -5983822814190343225L;
 

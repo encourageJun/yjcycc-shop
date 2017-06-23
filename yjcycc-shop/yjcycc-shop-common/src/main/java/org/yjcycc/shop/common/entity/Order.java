@@ -18,12 +18,19 @@ public class Order implements Serializable {
 	private String code; // 订单编号
 	private Double goodsTotalPrice; // 商品总价
 	private Double goodsTotalPriceModified; // 修改后的商品总价，下单后支持改价
+	private Double expressFee; // 运费
+	private String expressFeeDesc; // 运费描述，例如：满99免运费
 	private Integer status; // 订单状态
 	private String customId; // 用户id
 	private String activityId; // 活动id
 	private String couponId; // 优惠券id
 	private String expressId; // 快递id
 	private String paymentId; // 支付id
+	
+	private String receiverName; // 收货人姓名
+	private String receiverMobile; // 收货人手机
+	private String receiverAddress; // 收货人地址
+	
 	private Date insertTime; // 创建时间
 	private Date updateTime; // 更新时间
 
@@ -121,6 +128,46 @@ public class Order implements Serializable {
 
 	public void setUpdateTime(Date updateTime) {
 		this.updateTime = updateTime;
+	}
+
+	public String getReceiverName() {
+		return receiverName;
+	}
+
+	public void setReceiverName(String receiverName) {
+		this.receiverName = receiverName;
+	}
+
+	public String getReceiverMobile() {
+		return receiverMobile;
+	}
+
+	public void setReceiverMobile(String receiverMobile) {
+		this.receiverMobile = receiverMobile;
+	}
+
+	public String getReceiverAddress() {
+		return receiverAddress;
+	}
+
+	public void setReceiverAddress(String receiverAddress) {
+		this.receiverAddress = receiverAddress;
+	}
+
+	public Double getExpressFee() {
+		return expressFee;
+	}
+
+	public void setExpressFee(Double expressFee) {
+		this.expressFee = expressFee;
+	}
+
+	public String getExpressFeeDesc() {
+		return expressFeeDesc;
+	}
+
+	public void setExpressFeeDesc(String expressFeeDesc) {
+		this.expressFeeDesc = expressFeeDesc;
 	}
 
 }

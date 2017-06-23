@@ -53,11 +53,11 @@
 	
 	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
 		<property name="dataSource" ref="dataSource" />
-		<property name="configLocation" value="classpath:/mybatis/mybatis-goods-config.xml"/>
+		<property name="configLocation" value="classpath:/mybatis/mybatis-order-config.xml"/>
 		<property name="typeAliasesPackage" value="org.yjcycc.shop.common.entity"/>
 		<property name="mapperLocations">
 			<list>  
-	            <value>classpath*:/mybatis/goods/*.xml</value>
+	            <value>classpath*:/mybatis/order/*.xml</value>
 	        </list> 
 		</property>
 		<property name="plugins">
@@ -79,7 +79,7 @@
 	</bean>
 	
 	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">  
-	    <property name="basePackage" value="org.yjcycc.shop.goods.mapper"/>  
+	    <property name="basePackage" value="org.yjcycc.shop.order.mapper"/>  
 	    <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>  
 	</bean>
 	

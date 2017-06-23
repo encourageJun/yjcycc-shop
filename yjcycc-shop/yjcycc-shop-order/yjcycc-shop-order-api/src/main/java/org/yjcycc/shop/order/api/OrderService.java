@@ -1,6 +1,6 @@
 package org.yjcycc.shop.order.api;
 
-import org.yjcycc.shop.order.entity.Order;
+import org.yjcycc.shop.common.entity.Order;
 
 public interface OrderService {
 
