@@ -1,4 +1,4 @@
-package org.yjcycc.shop.goods.server;
+package org.yjcycc.shop.order.server;
 
 import java.rmi.Remote;
 import java.rmi.RemoteException;
@@ -19,17 +19,17 @@ import org.springframework.context.ApplicationContextAware;
 import org.springframework.context.Lifecycle;
 import org.springframework.stereotype.Component;
 import org.yjcycc.shop.common.interfaces.BaseServerService;
-import org.yjcycc.shop.common.rmi.GoodsRemoteConfig;
+import org.yjcycc.shop.common.rmi.OrderRemoteConfig;
 import org.yjcycc.shop.common.rmi.UsingIpPort;
-import org.yjcycc.shop.goods.service.GoodsService;
+import org.yjcycc.shop.order.api.OrderService;
 
 @Component
-public class GoodsServer implements Lifecycle,ApplicationContextAware,InitializingBean,BaseServerService{
+public class OrderServer implements Lifecycle,ApplicationContextAware,InitializingBean,BaseServerService{
 
 	
 	private static ApplicationContext appContext = null;
 	
-	private static Logger logger = Logger.getLogger(GoodsServer.class);
+	private static Logger logger = Logger.getLogger(OrderServer.class);
 	
 	private UsingIpPort using  = null;
 	
@@ -50,16 +50,16 @@ public class GoodsServer implements Lifecycle,ApplicationContextAware,Initializi
 		int port = 0;
 		if(index == 0){
 			//如果是重试模式，加载第2套配置
-			serverIp = GoodsRemoteConfig.getInstance().getServerIp0();
-			port = GoodsRemoteConfig.getInstance().getPort0();
+			serverIp = OrderRemoteConfig.getInstance().getServerIp0();
+			port = OrderRemoteConfig.getInstance().getPort0();
 		}else if(index == 1){
 			//如果非重试模式，加载第1套配置
-			serverIp = GoodsRemoteConfig.getInstance().getServerIp1();
-			port = GoodsRemoteConfig.getInstance().getPort1();
+			serverIp = OrderRemoteConfig.getInstance().getServerIp1();
+			port = OrderRemoteConfig.getInstance().getPort1();
 		} else if(index == 2){
 			//如果非重试模式，加载第1套配置
-			serverIp = GoodsRemoteConfig.getInstance().getServerIp2();
-			port = GoodsRemoteConfig.getInstance().getPort2();
+			serverIp = OrderRemoteConfig.getInstance().getServerIp2();
+			port = OrderRemoteConfig.getInstance().getPort2();
 		} else{
 			throw new IllegalArgumentException("只支持0，1，2，3，共4套配置！不支持：" + index);
 		}
@@ -70,10 +70,10 @@ public class GoodsServer implements Lifecycle,ApplicationContextAware,Initializi
 
  
 
-		Remote impl10 = (Remote) appContext.getBean(GoodsService.class);  
-		GoodsService goodsService = (GoodsService) UnicastRemoteObject.exportObject(impl10, 0);
+		Remote impl10 = (Remote) appContext.getBean(OrderService.class);  
+		OrderService orderService = (OrderService) UnicastRemoteObject.exportObject(impl10, 0);
 		// Bind the remote object's stub in the registry
-		registry.rebind("GoodsService", goodsService);
+		registry.rebind("OrderService", orderService);
 		
 		
 		logger.info("server is ready! server ip=" + serverIp +  ",port:"+ port);
@@ -111,10 +111,10 @@ public class GoodsServer implements Lifecycle,ApplicationContextAware,Initializi
 		/**
 		 * 是否使用某个自定的配置来启动，多节点分多主机部署时需要；单主机时不要配置。
 		 */
-		String specifyIpPortIndex = GoodsRemoteConfig.getInstance().getSpecifyIpPortIndex();
+		String specifyIpPortIndex = OrderRemoteConfig.getInstance().getSpecifyIpPortIndex();
 		if(specifyIpPortIndex == null || "".equals(specifyIpPortIndex.trim())){
 			//按照升序 读取配置文件 启动。。。。
-			for(int index = 0; index < GoodsRemoteConfig.MAX_NODES;index ++){
+			for(int index = 0; index < OrderRemoteConfig.MAX_NODES;index ++){
 				try {
 					registRMIService(index);
 					isRun = true;
@@ -176,7 +176,7 @@ public class GoodsServer implements Lifecycle,ApplicationContextAware,Initializi
 
 	
 	@Autowired
-	private GoodsZookeeperClient zkClient;
+	private OrderZookeeperClient zkClient;
 	
 
 	/**

@@ -3,6 +3,8 @@ package org.yjcycc.shop.common.entity;
 import java.io.Serializable;
 import java.util.Date;
 
+import org.apache.ibatis.type.Alias;
+
 /**
  * 实体类- 基础数据-系统参数
  * 
@@ -10,6 +12,7 @@ import java.util.Date;
  *
  */
 
+@Alias("baseSystemParam")
 public class BaseSystemParam implements Serializable {
 
 	private static final long serialVersionUID = -6041333248609105501L;

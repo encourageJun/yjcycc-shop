@@ -1,4 +1,4 @@
-package org.yjcycc.shop.goods.server;
+package org.yjcycc.shop.order.server;
 
 import java.io.IOException;
 import java.util.concurrent.ExecutorService;
@@ -14,7 +14,7 @@ import org.apache.zookeeper.CreateMode;
 import org.apache.zookeeper.ZooDefs;
 import org.apache.zookeeper.data.Stat;
 import org.springframework.stereotype.Component;
-import org.yjcycc.shop.common.rmi.GoodsRemoteConfig;
+import org.yjcycc.shop.common.rmi.OrderRemoteConfig;
 import org.yjcycc.shop.common.rmi.RemoteConfig;
 import org.yjcycc.shop.common.rmi.UsingIpPort;
 
@@ -42,9 +42,9 @@ import org.yjcycc.shop.common.rmi.UsingIpPort;
  *
  */
 @Component
-public class GoodsZookeeperClient {
+public class OrderZookeeperClient {
 	
-	private static Logger logger = Logger.getLogger(GoodsZookeeperClient.class);
+	private static Logger logger = Logger.getLogger(OrderZookeeperClient.class);
 	
 	
 	private transient boolean isRun = false; 
@@ -112,14 +112,14 @@ public class GoodsZookeeperClient {
 		zkTools.start();
 		logger.info("zkTools.start ok !   zkTools="+ zkTools );
 		try {
-			Stat exist = zkTools.checkExists().forPath(GoodsRemoteConfig.BASE_PATH);
+			Stat exist = zkTools.checkExists().forPath(OrderRemoteConfig.BASE_PATH);
 			if(exist == null){
-				logger.info("------  第一次构建basepath:" + GoodsRemoteConfig.BASE_PATH);
+				logger.info("------  第一次构建basepath:" + OrderRemoteConfig.BASE_PATH);
 				zkTools.create().creatingParentsIfNeeded().withMode(CreateMode.PERSISTENT)
-				.withACL(ZooDefs.Ids.OPEN_ACL_UNSAFE).forPath(GoodsRemoteConfig.BASE_PATH);
+				.withACL(ZooDefs.Ids.OPEN_ACL_UNSAFE).forPath(OrderRemoteConfig.BASE_PATH);
 			}
 		
-			String dataPath = GoodsRemoteConfig.BASE_PATH +"/"+ this.usingIpPort.getIndex();
+			String dataPath = OrderRemoteConfig.BASE_PATH +"/"+ this.usingIpPort.getIndex();
 			// 创建节点路径
 			zkTools.create().creatingParentsIfNeeded().withMode(CreateMode.EPHEMERAL)
 					.withACL(ZooDefs.Ids.OPEN_ACL_UNSAFE).forPath(dataPath);
@@ -135,7 +135,7 @@ public class GoodsZookeeperClient {
 			isRun = false;
 		}
 		isRun = true;
-		logger.info(" GpsZookeeperClient start >>> " + isRun);
+		logger.info(" OrderZookeeperClient start >>> " + isRun);
 	
 		return this.isRun;
 	}

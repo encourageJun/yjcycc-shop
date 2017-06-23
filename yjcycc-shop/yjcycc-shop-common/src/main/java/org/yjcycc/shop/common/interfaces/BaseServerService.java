@@ -1,8 +1,8 @@
-package org.yjcycc.shop.goods.service;
+package org.yjcycc.shop.common.interfaces;
 
 import org.yjcycc.shop.common.rmi.UsingIpPort;
 
-public interface GoodsServerService {
+public interface BaseServerService {
 
 	UsingIpPort getUsingIpPort();
 	 

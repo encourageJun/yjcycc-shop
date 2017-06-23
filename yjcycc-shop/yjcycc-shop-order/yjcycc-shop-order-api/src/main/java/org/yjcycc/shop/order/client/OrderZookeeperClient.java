@@ -1,4 +1,4 @@
-package org.yjcycc.shop.goods.client;
+package org.yjcycc.shop.order.client;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -17,7 +17,7 @@ import org.apache.curator.framework.recipes.cache.PathChildrenCacheListener;
 import org.apache.curator.retry.RetryNTimes;
 import org.apache.log4j.Logger;
 import org.apache.zookeeper.data.Stat;
-import org.yjcycc.shop.common.rmi.GoodsRemoteConfig;
+import org.yjcycc.shop.common.rmi.OrderRemoteConfig;
 import org.yjcycc.shop.common.rmi.RemoteConfig;
 import org.yjcycc.shop.common.rmi.UsingIpPort;
 import org.yjcycc.shop.common.utils.JsonUtil;
@@ -30,9 +30,9 @@ import org.yjcycc.shop.common.utils.JsonUtil;
  *         GPS计算服务客户端
  *
  */
-public class GoodsZookeeperClient {
+public class OrderZookeeperClient {
 
-	private static Logger logger = Logger.getLogger(GoodsZookeeperClient.class);
+	private static Logger logger = Logger.getLogger(OrderZookeeperClient.class);
 
 	private CuratorFramework zkTools;
 
@@ -47,7 +47,7 @@ public class GoodsZookeeperClient {
 
 	private PathChildrenCache childrenCache;
 
-	private GoodsZookeeperClient() {
+	private OrderZookeeperClient() {
 		synchronized (ipPorts) {
 			boolean result = createTreeNodeObserver();
 			if (result) {
@@ -67,9 +67,9 @@ public class GoodsZookeeperClient {
 		
 	}
 
-	private static final GoodsZookeeperClient instance = new GoodsZookeeperClient();
+	private static final OrderZookeeperClient instance = new OrderZookeeperClient();
 
-	public static GoodsZookeeperClient getInstance() {
+	public static OrderZookeeperClient getInstance() {
 		return instance;
 	}
 
@@ -114,7 +114,7 @@ public class GoodsZookeeperClient {
 			String connString = RemoteConfig.getInstance().getZookeeperConnUrl();
 			client = createZookeeperClient(connString);
 			client.start();
-			Stat stat = client.checkExists().forPath(GoodsRemoteConfig.BASE_PATH);
+			Stat stat = client.checkExists().forPath(OrderRemoteConfig.BASE_PATH);
 			if(stat == null || stat.getNumChildren() == 0){
 				logger.warn("没有子节点");
 				return tmpIpPorts;
@@ -123,15 +123,15 @@ public class GoodsZookeeperClient {
 			logger.info("readTreeStat >>> getNumChildren=" + children + ",stat=" + stat);
 			List<String> paths;
 			try {
-				paths = client.getChildren().forPath(GoodsRemoteConfig.BASE_PATH);
+				paths = client.getChildren().forPath(OrderRemoteConfig.BASE_PATH);
 				for (String p : paths) {
 					logger.info("loadNodes>> p=" + p);
-					String d = new String(client.getData().forPath(GoodsRemoteConfig.BASE_PATH + "/" + p),
+					String d = new String(client.getData().forPath(OrderRemoteConfig.BASE_PATH + "/" + p),
 							RemoteConfig.charset);
 					logger.info("loadNodes>> d=" + d);
 					if (isboolIp(d)) {
 						logger.warn("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
-						logger.warn("ignored get data ：" + GoodsRemoteConfig.BASE_PATH + "/" + p + ",d=" + d);
+						logger.warn("ignored get data ：" + OrderRemoteConfig.BASE_PATH + "/" + p + ",d=" + d);
 						logger.warn("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%\n\n");
 						continue;
 					}
@@ -198,15 +198,15 @@ public class GoodsZookeeperClient {
 		ipPorts.clear();
 		List<String> paths;
 		try {
-			paths = this.zkTools.getChildren().forPath(GoodsRemoteConfig.BASE_PATH);
+			paths = this.zkTools.getChildren().forPath(OrderRemoteConfig.BASE_PATH);
 			for (String p : paths) {
 				logger.info("loadNodes>> p=" + p);
-				String d = new String(this.zkTools.getData().forPath(GoodsRemoteConfig.BASE_PATH + "/" + p),
+				String d = new String(this.zkTools.getData().forPath(OrderRemoteConfig.BASE_PATH + "/" + p),
 						RemoteConfig.charset);
 				logger.info("loadNodes>> d=" + d);
 				if (isboolIp(d)) {
 					logger.warn("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
-					logger.warn("ignored get data ：" + GoodsRemoteConfig.BASE_PATH + "/" + p + ",d=" + d);
+					logger.warn("ignored get data ：" + OrderRemoteConfig.BASE_PATH + "/" + p + ",d=" + d);
 					logger.warn("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%\n\n");
 					continue;
 				}
@@ -238,7 +238,7 @@ public class GoodsZookeeperClient {
 			/**
 			 * 监听子节点的变化情况
 			 */
-			childrenCache = new PathChildrenCache(this.zkTools, GoodsRemoteConfig.BASE_PATH, true);
+			childrenCache = new PathChildrenCache(this.zkTools, OrderRemoteConfig.BASE_PATH, true);
 			childrenCache.start(StartMode.POST_INITIALIZED_EVENT);
 			childrenCache.getListenable().addListener(new PathChildrenCacheListener() {
 				@Override

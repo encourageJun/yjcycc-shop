@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.yjcycc.shop.common.mapper.BaseSystemParamMapper">
+	
+	<!-- table name -->
+	<sql id="tableName">
+		yjcycc_base_system_param
+	</sql>
+	
+	<!-- select field -->
+	<sql id="selectField">
+		id,
+		name,
+		code,
+		value,
+		data_type as dataType,
+		param_level as paramLevel,
+		is_limit_value as isLimitValue,
+		min_value as minValue,
+		max_value as maxValue,
+		remark,
+		is_valid as isValid,
+		insert_time as insertTime,
+		update_time as updateTime
+	</sql>
+	
+	<!-- add field -->
+	<sql id="addField">
+		id,
+		name,
+		code,
+		value,
+		data_type,
+		param_level,
+		is_limit_value,
+		min_value,
+		max_value,
+		remark,
+		is_valid,
+		insert_time,
+		update_time
+	</sql>
+	
+	<!-- field values -->
+	<sql id="FieldValue">
+		#{id},
+		#{name},
+		#{code},
+		#{value},
+		#{dataType},
+		#{paramLevel},
+		#{isLimitValue},
+		#{minValue},
+		#{maxValue},
+		#{remark},
+		#{isValid},
+		#{insertTime},
+		#{updateTime}
+	</sql>
+	
+	<!-- save -->
+	<insert id="save" parameterType="baseSystemParam">
+		insert into 
+			<include refid="tableName"></include>
+		(
+			<include refid="addField"></include>
+		) values (
+			<include refid="FieldValue"></include>
+		)
+	</insert>
+	
+	<!-- findById -->
+	<select id="findById" resultType="baseSystemParam" parameterType="String">
+		select 
+			<include refid="selectField"></include>
+		from 
+			<include refid="tableName"></include>
+		where 
+			id = #{id}
+	</select>
+	
+	<!-- findPager -->
+	<select id="findPager" resultType="baseSystemParam" parameterType="map">
+		select 
+			<include refid="selectField"></include>
+		from 
+			<include refid="tableName"></include>
+        where 1 = 1
+		order by insert_time desc
+	</select>
+</mapper>

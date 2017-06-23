@@ -11,15 +11,15 @@ import org.slf4j.LoggerFactory;
  * @author Rosun
  *
  */
-public class GoodsRemoteConfig {
+public class OrderRemoteConfig {
 
-	private static Logger logger = LoggerFactory.getLogger(GoodsRemoteConfig.class);
+	private static Logger logger = LoggerFactory.getLogger(OrderRemoteConfig.class);
 
-	private static final GoodsRemoteConfig instance = new GoodsRemoteConfig();
+	private static final OrderRemoteConfig instance = new OrderRemoteConfig();
 
-	private static final String CONFIG_FILE = "goods.rmi.properties";
+	private static final String CONFIG_FILE = "order.rmi.properties";
 
-	public static final String BASE_PATH = "/yycycc/shop/goods";// 节点路径
+	public static final String BASE_PATH = "/yycycc/shop/order";// 节点路径
 
 	public static final int MAX_NODES = 2;
 
@@ -53,7 +53,7 @@ public class GoodsRemoteConfig {
 	private String specifyIpPortIndex;
 
 	/** 初始化 */
-	private GoodsRemoteConfig() {
+	private OrderRemoteConfig() {
 		try {
 			Properties prop = new Properties();
 			prop.load(Thread.currentThread().getContextClassLoader().getResourceAsStream(CONFIG_FILE));
@@ -85,7 +85,7 @@ public class GoodsRemoteConfig {
 		}
 	}
 
-	public static final GoodsRemoteConfig getInstance() {
+	public static final OrderRemoteConfig getInstance() {
 		return instance;
 	}
 
