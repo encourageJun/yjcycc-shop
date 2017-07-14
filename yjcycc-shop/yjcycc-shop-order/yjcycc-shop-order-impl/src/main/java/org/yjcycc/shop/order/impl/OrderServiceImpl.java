@@ -12,12 +12,7 @@ public class OrderServiceImpl implements OrderService {
 	@Override
 	public void add(Order order) throws RemoteException {
 		
-		// 运费
 		
-		// 
-		
-		
-		// 订单项
 		
 	}
 

@@ -85,14 +85,6 @@
 		)
 	</insert>
 	
-	<update id="updateErrCount" parameterType="goods">
-		update gis_order_track
-		set 
-			err_count = #{errCount}
-		where
-			order_code = #{orderCode}
-	</update>
-	
 	<!-- findById -->
 	<select id="findById" resultType="goods" parameterType="long">
 		select 

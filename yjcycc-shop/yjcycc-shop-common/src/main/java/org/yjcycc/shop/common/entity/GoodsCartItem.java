@@ -3,14 +3,17 @@ package org.yjcycc.shop.common.entity;
 import java.io.Serializable;
 import java.util.Date;
 
+import org.apache.ibatis.type.Alias;
+
 /**
- * 实体类-用户购物车
+ * 实体类-购物车
  * 
  * @author Yangjun
  *
  */
 
-public class UserCartItem implements Serializable {
+@Alias("goodsCartItem")
+public class GoodsCartItem implements Serializable {
 
 	private static final long serialVersionUID = -3651163462505828824L;
 	
