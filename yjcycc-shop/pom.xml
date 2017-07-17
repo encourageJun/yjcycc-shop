@@ -67,9 +67,9 @@
   
   <distributionManagement>
   	<repository>
-  		<id>yjcycc-shop-release</id>
-  		<name>yjcycc-shop-release</name>
-  		<url>http://127.0.0.1:8081/nexus/repository/yjcycc-shop-release/</url>
+  		<id>yjcycc-shop-releases</id>
+  		<name>yjcycc-shop-releases</name>
+  		<url>http://127.0.0.1:8081/nexus/repository/yjcycc-shop-releases/</url>
   	</repository>
   	<snapshotRepository>
   		<id>yjcycc-shop-snapshots</id>
