@@ -1,5 +1,7 @@
-org\yjcycc\shop\goods\server\GoodsZookeeperClient.class
-org\yjcycc\shop\goods\server\GoodsServer.class
-org\yjcycc\shop\goods\StartGoodsServer.class
+org\yjcycc\shop\goods\mapper\GoodsCartItemMapper.class
 org\yjcycc\shop\goods\impl\GoodsServiceImpl.class
 org\yjcycc\shop\goods\mapper\GoodsMapper.class
+org\yjcycc\shop\goods\server\GoodsZookeeperClient.class
+org\yjcycc\shop\goods\server\GoodsServer.class
+org\yjcycc\shop\goods\impl\GoodsCartItemServiceImpl.class
+org\yjcycc\shop\goods\StartGoodsServer.class

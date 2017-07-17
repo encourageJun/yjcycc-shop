@@ -2,4 +2,6 @@ G:\workspace-git-myaccount\yjcycc-shop\yjcycc-shop\yjcycc-shop-goods\yjcycc-shop
 G:\workspace-git-myaccount\yjcycc-shop\yjcycc-shop\yjcycc-shop-goods\yjcycc-shop-goods-impl\src\main\java\org\yjcycc\shop\goods\impl\GoodsServiceImpl.java
 G:\workspace-git-myaccount\yjcycc-shop\yjcycc-shop\yjcycc-shop-goods\yjcycc-shop-goods-impl\src\main\java\org\yjcycc\shop\goods\server\GoodsServer.java
 G:\workspace-git-myaccount\yjcycc-shop\yjcycc-shop\yjcycc-shop-goods\yjcycc-shop-goods-impl\src\main\java\org\yjcycc\shop\goods\server\GoodsZookeeperClient.java
+G:\workspace-git-myaccount\yjcycc-shop\yjcycc-shop\yjcycc-shop-goods\yjcycc-shop-goods-impl\src\main\java\org\yjcycc\shop\goods\impl\GoodsCartItemServiceImpl.java
+G:\workspace-git-myaccount\yjcycc-shop\yjcycc-shop\yjcycc-shop-goods\yjcycc-shop-goods-impl\src\main\java\org\yjcycc\shop\goods\mapper\GoodsCartItemMapper.java
 G:\workspace-git-myaccount\yjcycc-shop\yjcycc-shop\yjcycc-shop-goods\yjcycc-shop-goods-impl\src\main\java\org\yjcycc\shop\goods\StartGoodsServer.java

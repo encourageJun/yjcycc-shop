@@ -79,7 +79,7 @@
   </distributionManagement>
   
   <build>
-      <finalName>yjcycc-shop</finalName>
+      <!-- <finalName>yjcycc-shop</finalName> -->
       <plugins>
           <plugin>
               <groupId>org.apache.maven.plugins</groupId>
@@ -94,7 +94,7 @@
 			  <groupId>org.apache.maven.plugins</groupId>
 			  <artifactId>maven-deploy-plugin</artifactId>
 			  <configuration>
-				  <skip>false</skip>
+			      <skip>${skip_maven_deploy}</skip>
 			  </configuration>
 		  </plugin>
       </plugins>
