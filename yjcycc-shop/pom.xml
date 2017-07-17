@@ -65,6 +65,19 @@
   	</dependencies>
   </dependencyManagement>
   
+  <distributionManagement>
+  	<repository>
+  		<id>yjcycc-shop-release</id>
+  		<name>yjcycc-shop-release</name>
+  		<url>http://127.0.0.1:8081/nexus/repository/yjcycc-shop-release/</url>
+  	</repository>
+  	<snapshotRepository>
+  		<id>yjcycc-shop-snapshots</id>
+  		<name>yjcycc-shop-snapshots</name>
+  		<url>http://127.0.0.1:8081/nexus/repository/yjcycc-shop-snapshots/</url>
+  	</snapshotRepository>
+  </distributionManagement>
+  
   <build>
       <finalName>yjcycc-shop</finalName>
       <plugins>
