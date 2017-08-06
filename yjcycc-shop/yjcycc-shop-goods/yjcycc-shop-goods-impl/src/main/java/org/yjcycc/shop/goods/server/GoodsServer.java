@@ -70,7 +70,7 @@ public class GoodsServer implements Lifecycle,ApplicationContextAware,Initializi
 
  
 
-		Remote impl10 = (Remote) appContext.getBean(GoodsService.class);  
+		Remote impl10 = (Remote) appContext.getBean(GoodsService.class.getSimpleName());  
 		GoodsService goodsService = (GoodsService) UnicastRemoteObject.exportObject(impl10, 0);
 		// Bind the remote object's stub in the registry
 		registry.rebind("GoodsService", goodsService);

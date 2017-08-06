@@ -8,12 +8,13 @@
     <version>0.0.1-SNAPSHOT</version>
   </parent>
   <artifactId>yjcycc-shop-member-impl</artifactId>
-
-  <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-  </properties>
   
   <dependencies>
+	<dependency>
+		<groupId>com.yjcycc.shop</groupId>
+		<artifactId>yjcycc-shop-member-api</artifactId>
+  		<version>0.0.1-SNAPSHOT</version>
+	</dependency>
   </dependencies>
   
 </project>

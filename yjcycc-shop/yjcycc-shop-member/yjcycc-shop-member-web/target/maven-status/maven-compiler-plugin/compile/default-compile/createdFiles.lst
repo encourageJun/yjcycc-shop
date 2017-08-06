@@ -1,1 +1,4 @@
 org\yjcycc\shop\member\web\App.class
+org\yjcycc\shop\member\web\resolver\MyExceptionResolver.class
+org\yjcycc\shop\member\web\controller\UserCustomController.class
+org\yjcycc\shop\member\web\interceptor\LoginHandlerInterceptor.class

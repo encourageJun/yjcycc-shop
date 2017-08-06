@@ -8,7 +8,6 @@ public class StartGoodsServer {
 
 	private static Logger logger = Logger.getLogger(StartGoodsServer.class);
 	
-	@SuppressWarnings("resource")
 	public static void main(String[] args) {
 		ClassPathXmlApplicationContext ctx = null;
 		try {
@@ -16,7 +15,7 @@ public class StartGoodsServer {
 			ctx = new ClassPathXmlApplicationContext("classpath:/spring/spring-goods-context.xml");
 			ctx.start();
 
-			GoodsServer server = ctx.getBean(GoodsServer.class);
+			GoodsServer server = (GoodsServer)ctx.getBean(GoodsServer.class.getSimpleName());
 			if (server.isRunning()) {
 				// 往zookeeper 节点树声明一下自身：创建一个临时节点！
 				boolean flag = server.createTreeNode();
