@@ -1,9 +1,9 @@
 package org.yjcycc.shop.common.entity;
 
+import org.apache.ibatis.type.Alias;
+
 import java.io.Serializable;
 import java.util.Date;
-
-import org.apache.ibatis.type.Alias;
 
 /**
  * 实体类- 基础数据-系统参数

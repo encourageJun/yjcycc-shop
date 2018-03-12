@@ -1,9 +1,9 @@
 package org.yjcycc.shop.member;
 
-import java.io.IOException;
-
 import org.apache.log4j.Logger;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import java.io.IOException;
 
 public class StartMemberServer {
 

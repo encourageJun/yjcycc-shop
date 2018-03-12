@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.yjcycc.shop</groupId>
   <artifactId>yjcycc-shop</artifactId>
@@ -8,16 +7,32 @@
   <packaging>pom</packaging>
   
   <modules>
+  	<!-- 公用 -->
     <module>yjcycc-shop-common</module>
+    <!-- 公共服务 -->
+    <module>yjcycc-shop-pub</module>
+    <!-- 用户服务 -->
   	<module>yjcycc-shop-member</module>
+  	<!-- 商品服务 -->
     <module>yjcycc-shop-goods</module>
+    <!-- 订单服务 -->
     <module>yjcycc-shop-order</module>
+    <!-- 支付服务 -->
     <module>yjcycc-shop-pay</module>
-    <module>yjcycc-shop-report</module>
-    <module>yjcycc-shop-houtai</module>
-    <module>yjcycc-shop-app</module>
-    <module>yjcycc-shop-dtm</module>
+    <!-- 活动服务 -->
     <module>yjcycc-shop-activity</module>
+    <!-- 报表服务 -->
+    <module>yjcycc-shop-report</module>
+    <!-- 后台应用 -->
+    <module>yjcycc-shop-houtai</module>
+    <!-- app应用 -->
+    <module>yjcycc-shop-app</module>
+    <!-- 线下应用 -->
+    <module>yjcycc-shop-offline</module>
+    <!-- 定时应用 -->
+    <module>yjcycc-shop-dtm</module>
+    <!-- 安全应用 -->
+    <module>yjcycc-shop-security</module>
   </modules>
   
   <dependencyManagement>

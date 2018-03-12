@@ -1,11 +1,10 @@
 package org.yjcycc.shop.goods.service;
 
-import java.rmi.Remote;
-import java.rmi.RemoteException;
-
+import com.github.pagehelper.Page;
 import org.yjcycc.shop.common.entity.Goods;
 
-import com.github.pagehelper.Page;
+import java.rmi.Remote;
+import java.rmi.RemoteException;
 
 public interface GoodsService extends Remote {
 

@@ -1,5 +1,7 @@
 package org.yjcycc.shop.common.entity;
 
+import org.apache.ibatis.type.Alias;
+
 import java.io.Serializable;
 import java.util.Date;
 
@@ -8,24 +10,17 @@ import java.util.Date;
  * @author Yangjun
  *
  */
-
+@Alias("goodsCategory")
 public class GoodsCategory implements Serializable {
 
 	private static final long serialVersionUID = 6863782088201986867L;
 
-	private Long id;
+	private String id;
+	private String parentId; // 父分类
 	private String name; // 商品分类名称
 	private Integer sort; // 排序序号
 	private Date insertTime; // 插入时间
 	private Date updateTime; // 更新时间
-
-	public Long getId() {
-		return id;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
-	}
 
 	public String getName() {
 		return name;
@@ -57,6 +52,22 @@ public class GoodsCategory implements Serializable {
 
 	public void setUpdateTime(Date updateTime) {
 		this.updateTime = updateTime;
+	}
+
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
+	}
+
+	public String getParentId() {
+		return parentId;
+	}
+
+	public void setParentId(String parentId) {
+		this.parentId = parentId;
 	}
 
 }

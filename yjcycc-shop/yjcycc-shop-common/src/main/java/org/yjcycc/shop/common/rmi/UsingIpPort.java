@@ -1,8 +1,8 @@
 package org.yjcycc.shop.common.rmi;
 
-import java.io.Serializable;
-
 import org.yjcycc.shop.common.utils.JsonUtil;
+
+import java.io.Serializable;
 
 public class UsingIpPort implements Serializable{
  

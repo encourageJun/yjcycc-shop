@@ -28,7 +28,7 @@
 	</logger>
 
 	<logger name="org.mybatis.spring">
-		<level value="error" />
+		<level value="debug" />
 	</logger>
 	
 	<logger name="org.apache.ibatis">

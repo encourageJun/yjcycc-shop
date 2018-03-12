@@ -1,10 +1,10 @@
 package org.yjcycc.shop.common.jms;
 
+import org.apache.activemq.ActiveMQConnectionFactory;
+
 import javax.jms.Connection;
 import javax.jms.ConnectionFactory;
 import javax.jms.JMSException;
-
-import org.apache.activemq.ActiveMQConnectionFactory;
 
 public class JMSConnFactory {
 	private static JMSConnFactory instance;

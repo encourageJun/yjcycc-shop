@@ -1,11 +1,11 @@
 package org.yjcycc.shop.goods.service;
 
+import org.yjcycc.shop.common.entity.GoodsCartItem;
+import org.yjcycc.shop.goods.dto.GoodsCartItemDTO;
+
 import java.rmi.Remote;
 import java.rmi.RemoteException;
 import java.util.List;
-
-import org.yjcycc.shop.common.entity.GoodsCartItem;
-import org.yjcycc.shop.goods.dto.GoodsCartItemDTO;
 
 public interface GoodsCartItemService extends Remote {
 

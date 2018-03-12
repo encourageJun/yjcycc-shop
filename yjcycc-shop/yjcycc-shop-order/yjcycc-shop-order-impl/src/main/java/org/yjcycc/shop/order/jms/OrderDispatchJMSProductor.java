@@ -1,11 +1,11 @@
 package org.yjcycc.shop.order.jms;
 
-import javax.jms.Connection;
-
 import org.springframework.stereotype.Component;
 import org.yjcycc.shop.common.jms.AbstractJMSProductor;
 import org.yjcycc.shop.common.jms.JMSConfig;
 import org.yjcycc.shop.common.jms.JMSConnFactory;
+
+import javax.jms.Connection;
 
 /**
  * 下单生产者

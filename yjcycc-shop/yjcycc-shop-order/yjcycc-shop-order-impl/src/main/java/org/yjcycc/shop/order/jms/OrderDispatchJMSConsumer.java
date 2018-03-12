@@ -1,13 +1,12 @@
 package org.yjcycc.shop.order.jms;
 
-import java.io.Serializable;
-
-import javax.jms.Connection;
-
 import org.springframework.stereotype.Component;
 import org.yjcycc.shop.common.jms.AbstractJMSConsumer;
 import org.yjcycc.shop.common.jms.JMSConfig;
 import org.yjcycc.shop.common.jms.JMSConnFactory;
+
+import javax.jms.Connection;
+import java.io.Serializable;
 
 
 /**

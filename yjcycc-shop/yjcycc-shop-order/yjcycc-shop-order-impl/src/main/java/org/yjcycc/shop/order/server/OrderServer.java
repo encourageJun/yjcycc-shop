@@ -1,15 +1,5 @@
 package org.yjcycc.shop.order.server;
 
-import java.rmi.Remote;
-import java.rmi.RemoteException;
-import java.rmi.registry.LocateRegistry;
-import java.rmi.registry.Registry;
-import java.rmi.server.ExportException;
-import java.rmi.server.UnicastRemoteObject;
-
-import javax.annotation.PostConstruct;
-import javax.annotation.PreDestroy;
-
 import org.apache.log4j.Logger;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.InitializingBean;
@@ -22,6 +12,15 @@ import org.yjcycc.shop.common.interfaces.BaseServerService;
 import org.yjcycc.shop.common.rmi.OrderRemoteConfig;
 import org.yjcycc.shop.common.rmi.UsingIpPort;
 import org.yjcycc.shop.order.api.OrderService;
+
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
+import java.rmi.Remote;
+import java.rmi.RemoteException;
+import java.rmi.registry.LocateRegistry;
+import java.rmi.registry.Registry;
+import java.rmi.server.ExportException;
+import java.rmi.server.UnicastRemoteObject;
 
 @Component
 public class OrderServer implements Lifecycle,ApplicationContextAware,InitializingBean,BaseServerService{

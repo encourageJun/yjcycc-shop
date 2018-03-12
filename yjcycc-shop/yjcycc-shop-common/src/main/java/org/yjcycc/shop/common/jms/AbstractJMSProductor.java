@@ -1,15 +1,9 @@
 package org.yjcycc.shop.common.jms;
 
-import java.io.Serializable;
-
-import javax.jms.Connection;
-import javax.jms.Destination;
-import javax.jms.JMSException;
-import javax.jms.MessageProducer;
-import javax.jms.ObjectMessage;
-import javax.jms.Session;
-
 import org.springframework.context.Lifecycle;
+
+import javax.jms.*;
+import java.io.Serializable;
 
 /**
  * JMS 生产者

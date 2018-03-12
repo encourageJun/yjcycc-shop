@@ -1,10 +1,5 @@
 package org.yjcycc.shop.order.server;
 
-import java.io.IOException;
-import java.util.concurrent.ExecutorService;
-
-import javax.annotation.PreDestroy;
-
 import org.apache.curator.framework.CuratorFramework;
 import org.apache.curator.framework.CuratorFrameworkFactory;
 import org.apache.curator.framework.recipes.cache.PathChildrenCache;
@@ -17,6 +12,10 @@ import org.springframework.stereotype.Component;
 import org.yjcycc.shop.common.rmi.OrderRemoteConfig;
 import org.yjcycc.shop.common.rmi.RemoteConfig;
 import org.yjcycc.shop.common.rmi.UsingIpPort;
+
+import javax.annotation.PreDestroy;
+import java.io.IOException;
+import java.util.concurrent.ExecutorService;
 
 /**
  * @author Rosun zk客户端和zk服务器间主要可能存在下面几种异常情况：<br>

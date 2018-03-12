@@ -1,9 +1,9 @@
 package org.yjcycc.shop.common.rmi;
 
-import java.util.Properties;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import java.util.Properties;
 
 /**
  * 远程服务的配置管理信息；包括RMI服务/JPush极光APP相关参数

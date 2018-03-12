@@ -1,9 +1,9 @@
 package org.yjcycc.shop.common.entity;
 
+import org.apache.ibatis.type.Alias;
+
 import java.io.Serializable;
 import java.util.Date;
-
-import org.apache.ibatis.type.Alias;
 
 /**
  * 实体类-商品基本信息表
@@ -16,7 +16,7 @@ public class Goods implements Serializable {
 
 	private static final long serialVersionUID = -610525676727417054L;
 
-	private Long id;
+	private String id;
 	private String name; // 商品名称
 	private String description; // 商品描述
 	
@@ -50,11 +50,11 @@ public class Goods implements Serializable {
 	private Date insertTime; // 插入时间
 	private Date updateTime; // 更新时间
 
-	public Long getId() {
+	public String getId() {
 		return id;
 	}
 
-	public void setId(Long id) {
+	public void setId(String id) {
 		this.id = id;
 	}
 

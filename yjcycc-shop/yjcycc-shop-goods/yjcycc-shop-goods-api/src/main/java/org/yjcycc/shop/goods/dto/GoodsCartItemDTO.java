@@ -10,8 +10,7 @@ public class GoodsCartItemDTO extends GoodsCartItem {
 	
 	private String goodsName; // 商品名称
 	private Double goodsPrice; // 商品价格
-	private Integer checkShelvesUp; // 是否上架
-	private Integer checkPreSale; // 是否预售
+	private Integer isPreSale; // 是否预售
 	private Integer remainingStock; // 剩余库存
 
 	public String getGoodsName() {
@@ -30,28 +29,20 @@ public class GoodsCartItemDTO extends GoodsCartItem {
 		this.goodsPrice = goodsPrice;
 	}
 
-	public Integer getCheckShelvesUp() {
-		return checkShelvesUp;
-	}
-
-	public void setCheckShelvesUp(Integer checkShelvesUp) {
-		this.checkShelvesUp = checkShelvesUp;
-	}
-
-	public Integer getCheckPreSale() {
-		return checkPreSale;
-	}
-
-	public void setCheckPreSale(Integer checkPreSale) {
-		this.checkPreSale = checkPreSale;
-	}
-
 	public Integer getRemainingStock() {
 		return remainingStock;
 	}
 
 	public void setRemainingStock(Integer remainingStock) {
 		this.remainingStock = remainingStock;
+	}
+
+	public Integer getIsPreSale() {
+		return isPreSale;
+	}
+
+	public void setIsPreSale(Integer isPreSale) {
+		this.isPreSale = isPreSale;
 	}
 
 }

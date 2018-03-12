@@ -17,13 +17,12 @@
 		gci.customer_id as customerId,
 		gci.goods_id as goodsId,
 		gci.quantity,
-		gci.check_enabled as checkEnabled,
+		gci.is_enabled as isEnabled,
 		gci.insert_time as insertTime,
 		gci.update_time as updateTime,
 		g.name as goodsName,
 		g.price as goodsPrice,
-		g.check_shelves_up as checkShelvesUp,
-		g.check_pre_sale as checkPreSale,
+		g.is_pre_sale as isPreSale,
 		(g.stock - g.real_sales) as remainingStock
 	</sql>
 	
@@ -33,7 +32,7 @@
 		gci.customer_id,
 		gci.goods_id,
 		gci.quantity,
-		gci.check_enabled,
+		gci.is_enabled,
 		gci.insert_time,
 		gci.update_time
 	</sql>
@@ -44,7 +43,7 @@
 		#{customerId},
 		#{goodsId},
 		#{quantity},
-		#{checkEnabled},
+		#{isEnabled},
 		#{insertTime},
 		#{updateTime}
 	</sql>

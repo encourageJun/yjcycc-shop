@@ -1,13 +1,5 @@
 package org.yjcycc.shop.order.client;
 
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-
 import org.apache.curator.framework.CuratorFramework;
 import org.apache.curator.framework.CuratorFrameworkFactory;
 import org.apache.curator.framework.recipes.cache.PathChildrenCache;
@@ -21,6 +13,14 @@ import org.yjcycc.shop.common.rmi.OrderRemoteConfig;
 import org.yjcycc.shop.common.rmi.RemoteConfig;
 import org.yjcycc.shop.common.rmi.UsingIpPort;
 import org.yjcycc.shop.common.utils.JsonUtil;
+
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 
 

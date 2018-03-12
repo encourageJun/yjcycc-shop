@@ -1,11 +1,11 @@
 package org.yjcycc.shop.order.core;
 
+import org.springframework.stereotype.Component;
+
 import java.util.Date;
 import java.util.concurrent.LinkedBlockingQueue;
 import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
-
-import org.springframework.stereotype.Component;
 
 /**
  * 下单适配器，所有下单业务总入口

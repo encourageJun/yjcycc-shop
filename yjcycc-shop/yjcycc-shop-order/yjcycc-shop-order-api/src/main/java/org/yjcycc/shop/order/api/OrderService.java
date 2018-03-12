@@ -1,9 +1,9 @@
 package org.yjcycc.shop.order.api;
 
+import org.yjcycc.shop.common.entity.Order;
+
 import java.rmi.Remote;
 import java.rmi.RemoteException;
-
-import org.yjcycc.shop.common.entity.Order;
 
 public interface OrderService extends Remote {
 

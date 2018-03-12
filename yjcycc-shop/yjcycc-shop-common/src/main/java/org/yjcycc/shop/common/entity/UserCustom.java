@@ -1,5 +1,7 @@
 package org.yjcycc.shop.common.entity;
 
+import org.apache.ibatis.type.Alias;
+
 import java.io.Serializable;
 import java.util.Date;
 
@@ -9,6 +11,7 @@ import java.util.Date;
  *
  */
 
+@Alias("userCustom")
 public class UserCustom implements Serializable {
 
 	private static final long serialVersionUID = -5588922233549903724L;
@@ -16,7 +19,7 @@ public class UserCustom implements Serializable {
 	private String id;
 	private String mobile; // 用户手机
 	private String password; // 登录密码
-	private String pay_password; // 支付密码
+	private String payPassword; // 支付密码
 	private String nick; // 昵称
 	private Date insertTime; // 插入时间
 	private Date updateTime; // 更新时间
@@ -45,14 +48,6 @@ public class UserCustom implements Serializable {
 		this.password = password;
 	}
 
-	public String getPay_password() {
-		return pay_password;
-	}
-
-	public void setPay_password(String pay_password) {
-		this.pay_password = pay_password;
-	}
-
 	public String getNick() {
 		return nick;
 	}
@@ -75,6 +70,14 @@ public class UserCustom implements Serializable {
 
 	public void setUpdateTime(Date updateTime) {
 		this.updateTime = updateTime;
+	}
+
+	public String getPayPassword() {
+		return payPassword;
+	}
+
+	public void setPayPassword(String payPassword) {
+		this.payPassword = payPassword;
 	}
 
 }
