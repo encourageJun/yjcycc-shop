@@ -17,7 +17,8 @@ public class GoodsCategory implements Serializable {
 
 	private String id;
 	private String parentId; // 父分类
-	private String name; // 商品分类名称
+	private String name; // 分类名称
+	private String picUrl; // 分类图片url
 	private Integer sort; // 排序序号
 	private Date insertTime; // 插入时间
 	private Date updateTime; // 更新时间
@@ -68,6 +69,14 @@ public class GoodsCategory implements Serializable {
 
 	public void setParentId(String parentId) {
 		this.parentId = parentId;
+	}
+
+	public String getPicUrl() {
+		return picUrl;
+	}
+
+	public void setPicUrl(String picUrl) {
+		this.picUrl = picUrl;
 	}
 
 }

@@ -12,6 +12,7 @@
 		id,
 		parent_id as parentId,
 		name,
+		pic_url as picUrl,
 		sort,
 		insert_time as insertTime,
 		update_time as updateTime
@@ -22,6 +23,7 @@
 		id,
 		parent_id,
 		name,
+		pic_url
 		sort,
 		insert_time,
 		update_time
@@ -32,6 +34,7 @@
 		#{id},
 		#{parentId},
 		#{name},
+		#{picUrl},
 		#{sort},
 		#{insertTime},
 		#{updateTime}

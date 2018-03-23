@@ -10,20 +10,17 @@
         http://www.springframework.org/schema/context/spring-context.xsd"
 >
     
-    <context:property-placeholder location="classpath*:dubbo.properties"/>
+    <!-- <context:property-placeholder location="classpath*:dubbo.properties"/>
     
     <dubbo:application name="yjcycc" owner="yjcycc" />
 
     <dubbo:protocol name="dubbo" port="20881" />
 
 	<dubbo:registry protocol="zookeeper" address="127.0.0.1:2181" />
-    <!-- <dubbo:registry address="zookeeper://127.0.0.1:2181" /> -->
 
 	<dubbo:annotation package="org.yjcycc.shop.goods" />
     
-    <!-- <import resource="redis-context.xml"/> -->
-    
-    <dubbo:service ref="goodsService" interface="org.yjcycc.shop.goods.service.GoodsService"/>
+    <dubbo:service ref="goodsService" interface="org.yjcycc.shop.goods.service.GoodsService"/> -->
 
 
 </beans>

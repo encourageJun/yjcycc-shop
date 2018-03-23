@@ -1,59 +1,61 @@
-package org.yjcycc.shop.common.rmi;
+package org.yjcycc.shop.common.tools.config;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
-import java.nio.charset.Charset;
 import java.util.Properties;
 
-public class RemoteConfig {
+import org.apache.log4j.Logger;
 
-	private static Logger logger = LoggerFactory.getLogger(RemoteConfig.class);
+public class ToolsConfig {
 
-	private static final RemoteConfig instance = new RemoteConfig();
+	private static Logger logger = Logger.getLogger(ToolsConfig.class);
 
-	private static final String RMI_CONFIG_FILE = "rmi.properties";
+	private static final ToolsConfig instance = new ToolsConfig();
 
-	public static Charset charset = Charset.forName("utf-8");
+	private static final String RMI_CONFIG_FILE = "tools.properties";
 
-	public static final String NAME_SPACE = "zk/" + SystemConfig.getEnviroment();
+	/**
+	 * activemq 链接url
+	 */
+	private String activemqJmsBrokerUrl;
 
-	// JMS 服务链接
-	private String jmsBrokerUrl;
-
-	// Zookeeper 集群 服务链接
+	/**
+	 * zookeeper 集群 服务链接
+	 */
 	private String zookeeperConnUrl;
 
-	// 极光app key
-	private String jpushAppkey;
-	// 极光app secret
-	private String jpushSecret;
-
+	/**
+	 * mongo用户名
+	 */
 	private String mongoUsername;
+	/**
+	 * mongo密码
+	 */
 	private String mongoPassword;
+	/**
+	 * mongo服务器ip地址
+	 */
 	private String mongoServerIp;
+	/**
+	 * mongo服务器端口号
+	 */
 	private int mongoServerPort;
 	
 	/** 初始化 */
-	private RemoteConfig() {
+	private ToolsConfig() {
 		try {
 			Properties prop = new Properties();
 			prop.load(Thread.currentThread().getContextClassLoader().getResourceAsStream(RMI_CONFIG_FILE));
 			String dotenv = "." + SystemConfig.getEnviroment();
 
-			jmsBrokerUrl = (prop.getProperty("rmi.jms.broker.url" + dotenv));
+			activemqJmsBrokerUrl = (prop.getProperty("activemq.jms.broker.url" + dotenv));
 
-			zookeeperConnUrl = prop.getProperty("rmi.zookeeper" + dotenv);
-
-			this.jpushAppkey = prop.getProperty("jpush.app.key" + dotenv);
-			this.jpushSecret = prop.getProperty("jpush.secret" + dotenv);
+			zookeeperConnUrl = prop.getProperty("zookeeper.url" + dotenv);
 
 			setMongoUsername(prop.getProperty("mongo.username" + dotenv));
 			setMongoPassword(prop.getProperty("mongo.password" + dotenv));
 			setMongoServerIp(prop.getProperty("mongo.server.ip" + dotenv));
 			setMongoServerPort(Integer.parseInt(prop.getProperty("mongo.server.port" + dotenv)));
 
-			logger.info(">>>>>>>>>>>>>>>>> jmsBrokerUrl:" + jmsBrokerUrl);
+			logger.info(">>>>>>>>>>>>>>>>> jmsBrokerUrl:" + activemqJmsBrokerUrl);
 			logger.info(">>>>>>>>>>>>>>>>> zookeeperConnUrl:" + zookeeperConnUrl);
 			logger.info(">>>>>>>>>>>>>>>>> mongo:ip=" + getMongoServerIp() + ", port=" + getMongoServerPort()
 					+ ", username=" + getMongoUsername() + ", password=" + getMongoPassword());
@@ -63,16 +65,8 @@ public class RemoteConfig {
 		}
 	}
 	
-	public static final RemoteConfig getInstance() {
+	public static final ToolsConfig getInstance() {
 		return instance;
-	}
-
-	public String getJmsBrokerUrl() {
-		return jmsBrokerUrl;
-	}
-
-	public void setJmsBrokerUrl(String jmsBrokerUrl) {
-		this.jmsBrokerUrl = jmsBrokerUrl;
 	}
 
 	public String getZookeeperConnUrl() {
@@ -81,22 +75,6 @@ public class RemoteConfig {
 
 	public void setZookeeperConnUrl(String zookeeperConnUrl) {
 		this.zookeeperConnUrl = zookeeperConnUrl;
-	}
-
-	public String getJpushAppkey() {
-		return jpushAppkey;
-	}
-
-	public void setJpushAppkey(String jpushAppkey) {
-		this.jpushAppkey = jpushAppkey;
-	}
-
-	public String getJpushSecret() {
-		return jpushSecret;
-	}
-
-	public void setJpushSecret(String jpushSecret) {
-		this.jpushSecret = jpushSecret;
 	}
 
 	public String getMongoUsername() {
@@ -129,6 +107,14 @@ public class RemoteConfig {
 
 	public void setMongoServerPort(int mongoServerPort) {
 		this.mongoServerPort = mongoServerPort;
+	}
+
+	public String getActivemqJmsBrokerUrl() {
+		return activemqJmsBrokerUrl;
+	}
+
+	public void setActivemqJmsBrokerUrl(String activemqJmsBrokerUrl) {
+		this.activemqJmsBrokerUrl = activemqJmsBrokerUrl;
 	}
 
 }
