@@ -39,9 +39,6 @@ public class GoodsServer extends AbstractZookeeperClientRegister implements Life
 	
 	private int port = 0;
 	
-//	@Autowired
-//	private GoodsZookeeperClient goodsClient;
-	
 	@Override
 	public String getNameSpaceForZK() {
 		return ZkNodeConstant.NAME_SPACE;

@@ -63,10 +63,10 @@
 	                <property name="properties">
 	                    <value>
 	                        helperDialect=mysql
-	                        reasonable=true
+	                        reasonable=false
 	                        supportMethodsArguments=true
 	                        params=count=countSql
-	                        autoRuntimeDialect=falses
+	                        autoRuntimeDialect=false
 	                    </value>
 	                </property>
 	            </bean>

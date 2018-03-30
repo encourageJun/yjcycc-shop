@@ -3,12 +3,6 @@
        xmlns:context="http://www.springframework.org/schema/context"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
            http://www.springframework.org/schema/beans/spring-beans-4.2.xsd  
-
-
-
-
-
-
            http://www.springframework.org/schema/context  
            http://www.springframework.org/schema/context/spring-context-4.2.xsd"
        default-lazy-init="false">
@@ -17,6 +11,6 @@
 	<context:component-scan base-package="org.yjcycc"/>
 	
 	<import resource="spring-mvc-servlet.xml"/>
-	<import resource="spring-dubbo-context.xml"/>
+	<!-- <import resource="spring-dubbo-context.xml"/> -->
 	
 </beans>
