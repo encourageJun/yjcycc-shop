@@ -1,7 +1,0 @@
-org\yjcycc\shop\goods\service\GoodsService.class
-org\yjcycc\shop\goods\service\GoodsCartItemService.class
-org\yjcycc\shop\goods\client\GoodsClient.class
-org\yjcycc\shop\goods\client\GoodsZookeeperClient$1.class
-org\yjcycc\shop\goods\client\GoodsZookeeperClient$2.class
-org\yjcycc\shop\goods\dto\GoodsCartItemDTO.class
-org\yjcycc\shop\goods\client\GoodsZookeeperClient.class
