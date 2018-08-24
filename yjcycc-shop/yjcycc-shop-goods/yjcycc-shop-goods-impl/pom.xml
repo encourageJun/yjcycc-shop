@@ -5,7 +5,7 @@
   <parent>
     <groupId>com.yjcycc.shop</groupId>
     <artifactId>yjcycc-shop-goods</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>1.0.0</version>
   </parent>
   <artifactId>yjcycc-shop-goods-impl</artifactId>
   
@@ -13,12 +13,12 @@
 	<dependency>
 		<groupId>com.yjcycc.shop</groupId>
 		<artifactId>yjcycc-shop-goods-api</artifactId>
-  		<version>0.0.1-SNAPSHOT</version>
+  		<version>1.0.0</version>
 	</dependency>
 	<dependency>
 		<groupId>com.yjcycc.tools</groupId>
 		<artifactId>yjcycc-tools-common</artifactId>
-  		<version>0.0.1-SNAPSHOT</version>
+  		<version>1.0.0</version>
 	</dependency>
   </dependencies>
 </project>
